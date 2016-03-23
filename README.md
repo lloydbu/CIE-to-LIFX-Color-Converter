@@ -32,7 +32,7 @@ The sample iOS project lets you generate random CIE colors and see the HSBK equi
 
 ## Customization
 
-The conversion lookup data in LIFXData50 x 50.plist was created with a consumer-grade colorimeter, so it's acceptable but not perfect. If you replace it with your own data, here's the format:
+The conversion lookup data in LIFXData50 x 50.plist was created with a consumer-grade colorimeter, so it's acceptable but not perfect. If you want to replace it with your own data, here's the format:
 
 The data is stored in a TwoDArray object. It's a 2D lookup table that can be addressed with coordinates in [0..1],[0..1].
 
