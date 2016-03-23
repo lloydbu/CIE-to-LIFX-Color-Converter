@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73E-h8-eRj">
+                                <rect key="frame" x="232" y="58" width="136" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bJx-hs-2MU"/>
+                                    <constraint firstAttribute="width" constant="136" id="ulV-Cj-C0l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Generate color"/>
+                                <connections>
+                                    <action selector="generatorTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rzq-WN-Yrx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-2i-3aZ">
+                                <rect key="frame" x="142" y="153" width="134" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="g7F-nT-acT"/>
+                                    <constraint firstAttribute="height" constant="126" id="qWH-Qy-arn"/>
+                                </constraints>
+                                <string key="text">CIE 1931
+
+x
+y
+brightness</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkG-93-Rcr">
+                                <rect key="frame" x="303" y="153" width="134" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="6Om-Fs-9E9"/>
+                                    <constraint firstAttribute="height" constant="126" id="v6n-vT-PF5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-ma-yN7">
+                                <rect key="frame" x="142" y="336" width="134" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="Joh-T9-Y27"/>
+                                    <constraint firstAttribute="height" constant="155" id="jyy-22-Ymc"/>
+                                </constraints>
+                                <string key="text">LIFX 
+
+H
+S
+B
+K</string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-Yb-ryA">
+                                <rect key="frame" x="303" y="336" width="134" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="155" id="4Ou-lX-Uy3"/>
+                                    <constraint firstAttribute="width" constant="134" id="EBo-69-FOc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="W84-eG-mu2"/>
+                                    <constraint firstAttribute="height" constant="155" id="eum-jv-o9j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.6705882352941176" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4Ou-lX-Uy3"/>
+                                        <exclude reference="W84-eG-mu2"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IkG-93-Rcr" firstAttribute="leading" secondItem="yS8-2i-3aZ" secondAttribute="trailing" constant="27" id="0qS-O3-Ct3"/>
+                            <constraint firstItem="vYC-ma-yN7" firstAttribute="top" secondItem="yS8-2i-3aZ" secondAttribute="bottom" constant="57" id="LgV-sb-vby"/>
+                            <constraint firstAttribute="centerX" secondItem="73E-h8-eRj" secondAttribute="centerX" id="OkH-Wy-EN2"/>
+                            <constraint firstItem="qa5-Yb-ryA" firstAttribute="leading" secondItem="vYC-ma-yN7" secondAttribute="trailing" constant="27" id="Opx-Af-pFD"/>
+                            <constraint firstAttribute="centerX" secondItem="vYC-ma-yN7" secondAttribute="centerX" constant="91" id="SVR-6Z-8cO"/>
+                            <constraint firstItem="yS8-2i-3aZ" firstAttribute="top" secondItem="IkG-93-Rcr" secondAttribute="top" id="XRI-fg-hmG"/>
+                            <constraint firstAttribute="centerX" secondItem="yS8-2i-3aZ" secondAttribute="centerX" constant="91" id="dA5-PU-8nn"/>
+                            <constraint firstItem="vYC-ma-yN7" firstAttribute="top" secondItem="qa5-Yb-ryA" secondAttribute="top" id="drx-r6-tAU"/>
+                            <constraint firstItem="73E-h8-eRj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="38" id="j6J-TD-c5K"/>
+                            <constraint firstItem="yS8-2i-3aZ" firstAttribute="top" secondItem="73E-h8-eRj" secondAttribute="bottom" constant="65" id="l6V-1e-yTY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LIFXColors" destination="qa5-Yb-ryA" id="fw7-vc-O4P"/>
+                        <outlet property="philipsColors" destination="IkG-93-Rcr" id="0S9-Er-9fC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
