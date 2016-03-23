@@ -3,19 +3,19 @@ Converts colors from the [CIE 1931 x,y system](https://en.wikipedia.org/wiki/CIE
 
 I needed to add support for LIFX bulbs to a current iOS project for Philips Hue which handles colors in the CIE 1931 system. Since LIFX is geared to accept colors in an unusual HSBK space, I wrote a converter.
 
-# Simple usage
+## Simple usage
 
 
-```sh
+```objective-c
 
 CGPoint hue_sat = [[LIFXConvert sharedInstance] HSfromX:CIE.x Y:CIE.y];
 
-LFXHSBKColor result = [LFXHSBKColor colorWithHue:hue_sat.x*360.0  saturation:hue_sat.y brightness:brightness kelvin:6500];
+LFXHSBKColor *result = [LFXHSBKColor colorWithHue:hue_sat.x*360.0  saturation:hue_sat.y brightness:brightness kelvin:6500];
 	
 ```
 
 
-# Details
+## Details
 
 From CIE x,y coordinates the converter produces a CGPoint where x = hue in [0..1]
 and y = saturation in [0..1]. You'll want to multiply the hue by 360 before passing it to LIFX. The color temperature is always 6500.
@@ -23,9 +23,14 @@ and y = saturation in [0..1]. You'll want to multiply the hue by 360 before pass
 If you request a color outside the LIFX gamut, the result will be clamped to the nearest in-gamut point.
 
 
+## Sample Project
+
+![LIFX Converter screenshot](http://www.flamingpear.com/images/lifxconverter-screenshot2.png "LIFX Converter screenshot")
 
 
-# Customization
+The sample iOS project lets you generate random CIE colors and see the HSBK equivalent. It doesn't contain any network code that talks to smart bulbs.
+
+## Customization
 
 The conversion lookup data in LIFXData50 x 50.plist was created with a consumer-grade colorimeter, so it's acceptable but not perfect. If you replace it with your own data, here's the format:
 
@@ -52,14 +57,14 @@ get_ramped_point_from_unitary gives linearly-interpolated results and it's smart
 	correctly handle the 0°/360° hue wraparound problem.
 
 
-# Requirements
+## Requirements
 * iOS 8.0 or later
 * Xcode 7.2
 
-# Author
+## Author
 lloydbu, lloyd@flamingpear.com
 
-# License
+## License
 
 CIE to LIFX Color Converter is available under the MIT license. See the LICENSE file for more info.
 
