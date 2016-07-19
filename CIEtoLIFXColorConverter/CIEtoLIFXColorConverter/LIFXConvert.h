@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "TwoDArray.h"
 #import "LIFX constants.h"
+#import "Osram constants.h"
 #import "complextype.h"
 
 @interface LIFXConvert : NSObject
@@ -16,11 +17,15 @@
 
 - (CGPoint) HSfromX:(float)x Y:(float)y;
 
+- (void) OsramR:(float*)R G:(float*)G B:(float*)B fromX:(float)x Y:(float)y;
+
 + (BOOL) point:(CGPoint)P inPoly:(NSArray *)colorPoints;
 
 + (NSArray *)colorPointsForLIFXModel:(NSString*)model;
 
-@property TwoDArray * grid;
+@property TwoDArray * gridLIFX;
+
+@property TwoDArray * gridOsram;
 
 fcomplex Complex(tcfloat re, tcfloat im);
 

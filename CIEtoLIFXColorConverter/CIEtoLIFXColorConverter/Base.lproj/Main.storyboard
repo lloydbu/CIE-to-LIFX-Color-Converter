@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73E-h8-eRj">
-                                <rect key="frame" x="232" y="58" width="136" height="30"/>
+                                <rect key="frame" x="139" y="58" width="136" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bJx-hs-2MU"/>
@@ -30,23 +30,38 @@
                                     <action selector="generatorTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rzq-WN-Yrx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-2i-3aZ">
-                                <rect key="frame" x="142" y="153" width="134" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yS8-2i-3aZ">
+                                <rect key="frame" x="49" y="124" width="134" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="g7F-nT-acT"/>
                                     <constraint firstAttribute="height" constant="126" id="qWH-Qy-arn"/>
                                 </constraints>
-                                <string key="text">CIE 1931
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">CIE 1931
 
-x
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">x
 y
 brightness</string>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.49546002327127658" green="0.49546002327127658" blue="0.49546002327127658" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkG-93-Rcr">
-                                <rect key="frame" x="303" y="153" width="134" height="126"/>
+                                <rect key="frame" x="210" y="124" width="134" height="126"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="6Om-Fs-9E9"/>
                                     <constraint firstAttribute="height" constant="126" id="v6n-vT-PF5"/>
@@ -55,24 +70,39 @@ brightness</string>
                                 <color key="textColor" red="0.6705882352941176" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-ma-yN7">
-                                <rect key="frame" x="142" y="336" width="134" height="155"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-ma-yN7">
+                                <rect key="frame" x="49" y="285" width="134" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="Joh-T9-Y27"/>
                                     <constraint firstAttribute="height" constant="155" id="jyy-22-Ymc"/>
                                 </constraints>
-                                <string key="text">LIFX 
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">LIFX 
 
-H
+</string>
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">H
 S
 B
 K</string>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <attributes>
+                                            <color key="NSColor" red="0.5034595246010638" green="0.5034595246010638" blue="0.5034595246010638" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-Yb-ryA">
-                                <rect key="frame" x="303" y="336" width="134" height="155"/>
+                                <rect key="frame" x="210" y="285" width="134" height="155"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="155" id="4Ou-lX-Uy3"/>
                                     <constraint firstAttribute="width" constant="134" id="EBo-69-FOc"/>
@@ -89,11 +119,63 @@ K</string>
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYm-oN-lfU">
+                                <rect key="frame" x="210" y="456" width="134" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="134" id="2sK-VA-bMv"/>
+                                    <constraint firstAttribute="height" constant="165" id="3HU-90-6vn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="155" id="Bf3-nG-PCF"/>
+                                    <constraint firstAttribute="width" constant="134" id="o16-8m-Wfa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.6705882353" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bf3-nG-PCF"/>
+                                        <exclude reference="2sK-VA-bMv"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJ4-Ne-m6d">
+                                <rect key="frame" x="49" y="456" width="134" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="UiY-nz-7RY"/>
+                                    <constraint firstAttribute="width" constant="134" id="xlu-qt-HL8"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lightify
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">R
+G
+B
+brightness</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Avenir-Book"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HJ4-Ne-m6d" firstAttribute="top" secondItem="vYC-ma-yN7" secondAttribute="bottom" constant="16" id="0HC-jQ-i8N"/>
                             <constraint firstItem="IkG-93-Rcr" firstAttribute="leading" secondItem="yS8-2i-3aZ" secondAttribute="trailing" constant="27" id="0qS-O3-Ct3"/>
-                            <constraint firstItem="vYC-ma-yN7" firstAttribute="top" secondItem="yS8-2i-3aZ" secondAttribute="bottom" constant="57" id="LgV-sb-vby"/>
+                            <constraint firstItem="HJ4-Ne-m6d" firstAttribute="trailing" secondItem="vYC-ma-yN7" secondAttribute="trailing" id="5AR-ql-NYt"/>
+                            <constraint firstItem="vYC-ma-yN7" firstAttribute="top" secondItem="yS8-2i-3aZ" secondAttribute="bottom" constant="35" id="LgV-sb-vby"/>
+                            <constraint firstItem="FYm-oN-lfU" firstAttribute="top" secondItem="qa5-Yb-ryA" secondAttribute="bottom" constant="16" id="Me7-uH-GY6"/>
                             <constraint firstAttribute="centerX" secondItem="73E-h8-eRj" secondAttribute="centerX" id="OkH-Wy-EN2"/>
                             <constraint firstItem="qa5-Yb-ryA" firstAttribute="leading" secondItem="vYC-ma-yN7" secondAttribute="trailing" constant="27" id="Opx-Af-pFD"/>
                             <constraint firstAttribute="centerX" secondItem="vYC-ma-yN7" secondAttribute="centerX" constant="91" id="SVR-6Z-8cO"/>
@@ -101,16 +183,20 @@ K</string>
                             <constraint firstAttribute="centerX" secondItem="yS8-2i-3aZ" secondAttribute="centerX" constant="91" id="dA5-PU-8nn"/>
                             <constraint firstItem="vYC-ma-yN7" firstAttribute="top" secondItem="qa5-Yb-ryA" secondAttribute="top" id="drx-r6-tAU"/>
                             <constraint firstItem="73E-h8-eRj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="38" id="j6J-TD-c5K"/>
-                            <constraint firstItem="yS8-2i-3aZ" firstAttribute="top" secondItem="73E-h8-eRj" secondAttribute="bottom" constant="65" id="l6V-1e-yTY"/>
+                            <constraint firstItem="yS8-2i-3aZ" firstAttribute="top" secondItem="73E-h8-eRj" secondAttribute="bottom" constant="36" id="l6V-1e-yTY"/>
+                            <constraint firstItem="FYm-oN-lfU" firstAttribute="leading" secondItem="qa5-Yb-ryA" secondAttribute="leading" id="xGh-VB-Nyz"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="LIFXColors" destination="qa5-Yb-ryA" id="fw7-vc-O4P"/>
+                        <outlet property="lightifyColors" destination="FYm-oN-lfU" id="2t4-hn-s53"/>
                         <outlet property="philipsColors" destination="IkG-93-Rcr" id="0S9-Er-9fC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="289" y="377"/>
         </scene>
     </scenes>
 </document>

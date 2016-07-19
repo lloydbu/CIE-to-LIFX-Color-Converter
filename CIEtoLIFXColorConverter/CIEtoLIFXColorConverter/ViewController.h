@@ -15,5 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *LIFXColors;
 
+@property (strong, nonatomic) IBOutlet UILabel *lightifyColors;
+
 @end
 

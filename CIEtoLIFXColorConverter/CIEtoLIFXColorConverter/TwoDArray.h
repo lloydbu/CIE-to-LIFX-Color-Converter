@@ -9,7 +9,6 @@
 
 
 @interface TwoDArray : NSObject
-
 @property NSMutableArray* backingStore;
 @property size_t numRows;
 @property size_t numCols;
@@ -19,7 +18,7 @@
 
 -(void) replaceObjectAtX:(int)col Y:(int)row withPoint:(CGPoint)p;
 
--(CGPoint) get_ramped_point_from_unitary:(CGPoint) unit; //needed
+-(CGPoint) get_ramped_point_from_unitary:(CGPoint) unit fixWrapX:(BOOL)fixWrapX;
 
 -(CGPoint)unitaryCoordatesForSlotX:(int)col Y:(int)row;
 

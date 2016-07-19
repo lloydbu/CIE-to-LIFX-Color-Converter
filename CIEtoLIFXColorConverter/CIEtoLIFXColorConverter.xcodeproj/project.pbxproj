@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1F206D1D3E94E600CF6B6C /* OsramData 40 x 40.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E1F206C1D3E94E600CF6B6C /* OsramData 40 x 40.plist */; };
 		6E3538D41B558A7800A1ED0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3538D31B558A7800A1ED0D /* main.m */; };
 		6E3538D71B558A7800A1ED0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3538D61B558A7800A1ED0D /* AppDelegate.m */; };
 		6E3538DA1B558A7800A1ED0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E3538D91B558A7800A1ED0D /* ViewController.m */; };
@@ -30,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E1F206A1D3E90AF00CF6B6C /* Osram constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Osram constants.h"; sourceTree = "<group>"; };
+		6E1F206B1D3E91B200CF6B6C /* clamps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clamps.h; sourceTree = "<group>"; };
+		6E1F206C1D3E94E600CF6B6C /* OsramData 40 x 40.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "OsramData 40 x 40.plist"; sourceTree = "<group>"; };
 		6E34422C1B559E7A005292AC /* lerpDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lerpDefinition.h; sourceTree = "<group>"; };
 		6E3442301B55A21F005292AC /* LIFX constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LIFX constants.h"; sourceTree = "<group>"; };
 		6E3442311B55A2A0005292AC /* complextype.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = complextype.h; sourceTree = "<group>"; };
@@ -97,7 +101,9 @@
 				6E3538D61B558A7800A1ED0D /* AppDelegate.m */,
 				6E3442311B55A2A0005292AC /* complextype.h */,
 				6E34422C1B559E7A005292AC /* lerpDefinition.h */,
+				6E1F206B1D3E91B200CF6B6C /* clamps.h */,
 				6E3442301B55A21F005292AC /* LIFX constants.h */,
+				6E1F206A1D3E90AF00CF6B6C /* Osram constants.h */,
 				6E3538F71B558AA600A1ED0D /* LIFXConvert.h */,
 				6E3538F81B558AA600A1ED0D /* LIFXConvert.m */,
 				6E3442321B55A3FE005292AC /* SynthesizeSingleton.h */,
@@ -106,6 +112,7 @@
 				6E3538D81B558A7800A1ED0D /* ViewController.h */,
 				6E3538D91B558A7800A1ED0D /* ViewController.m */,
 				6E5E5CB41CA2C3B1004E8EA3 /* LIFXData 50 x 50.plist */,
+				6E1F206C1D3E94E600CF6B6C /* OsramData 40 x 40.plist */,
 				6E3538DE1B558A7800A1ED0D /* Images.xcassets */,
 				6E3538E01B558A7800A1ED0D /* LaunchScreen.xib */,
 				6E3538DB1B558A7800A1ED0D /* Main.storyboard */,
@@ -223,6 +230,7 @@
 				6E3538DD1B558A7800A1ED0D /* Main.storyboard in Resources */,
 				6E3538E21B558A7800A1ED0D /* LaunchScreen.xib in Resources */,
 				6E3538DF1B558A7800A1ED0D /* Images.xcassets in Resources */,
+				6E1F206D1D3E94E600CF6B6C /* OsramData 40 x 40.plist in Resources */,
 				6E5E5CB51CA2C3B1004E8EA3 /* LIFXData 50 x 50.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

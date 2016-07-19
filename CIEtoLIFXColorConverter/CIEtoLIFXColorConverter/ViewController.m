@@ -78,7 +78,14 @@
 	CGFloat brightness = [ViewController getRandom1];
 	
 	CGPoint hs = [[LIFXConvert sharedInstance] HSfromX:CIE.x Y:CIE.y];
-	
+
+	float R,G,B;
+
+	[[LIFXConvert sharedInstance] OsramR:&R G:&G B:&B fromX:CIE.x Y:CIE.y];
+
+
+
+
 	//To get LFXHSBKColor:
 	//[LFXHSBKColor colorWithHue:hs.x*360.0  saturation:hs.y brightness:brightness kelvin:6500];
 	
@@ -86,7 +93,10 @@
 	self.philipsColors.text = [NSString stringWithFormat:@"\n\n%.2f\n%.2f\n%.2f", CIE.x, CIE.y, brightness];
 	
 	self.LIFXColors.text = [NSString stringWithFormat:@"\n\n%.2f\n%.2f\n%.2f\n%.2f", hs.x*360.0, hs.y, brightness, 6500.0];
-	
+
+	self.lightifyColors.text = [NSString stringWithFormat:@"\n\n%.2f\n%.2f\n%.2f\n%.2f", R, G, B, brightness];
+
+
 }
 
 /***************************************************************************************************************/

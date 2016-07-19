@@ -6,15 +6,7 @@
 
 #import "TwoDArray.h"
 #import "lerpDefinition.h"
-
-#define CLAMP(a,b,c) \
-if (a<b ) \
-{ a=b; } \
-else \
-{ \
-if (a>c ) { a=c;} \
-}
-
+#import "clamps.h"
 
 
 @implementation TwoDArray
@@ -178,60 +170,66 @@ if (a>c ) { a=c;} \
 
 /******************************************************************************************/
 
--(CGPoint) get_ramped_point_from_unitary:(CGPoint) unit
+
+-(CGPoint) get_ramped_point_from_unitary:(CGPoint) unit fixWrapX:(BOOL)fixWrapX
 {
-	
+
 	CLAMP(unit.x, 0, 1)
 	CLAMP(unit.y, 0, 1)
-	
+
 	float xf = unit.x * (self.numCols-1);
 	float yf = unit.y * (self.numRows-1);
 
-		
+
 	float 	x = floorf(xf);
 	float 	y=  floorf(yf);
-		
+
 	float 	xfrac = xf-x;
 	float 	yfrac = yf-y;
-		
-	
+
+
 	CGPoint r1 = [self safelyGetPointAtX:x   Y:y  ];
 	CGPoint r2 = [self safelyGetPointAtX:x+1 Y:y  ];
 	CGPoint r3 = [self safelyGetPointAtX:x   Y:y+1];
 	CGPoint r4 = [self safelyGetPointAtX:x+1 Y:y+1];
-	
- 
-	/***************/
-	
-	//fix the hue wraparound problem
-	
-	double biggest  = MAX( MAX(r1.x, r2.x), MAX(r3.x, r4.x) );
-	
-	double smallest = MIN( MIN(r1.x, r2.x), MIN(r3.x, r4.x) );
-	
-	
-	if ((biggest >= 0.75) && (smallest < 0.25) )  // points span the hue discontinuity line
+
+
+	if (fixWrapX)
 	{
-		if (r1.x < 0.25) {r1.x += 1.0;}
-		if (r2.x < 0.25) {r2.x += 1.0;}
-		if (r3.x < 0.25) {r3.x += 1.0;}
-		if (r4.x < 0.25) {r4.x += 1.0;}
+		/***************/
+		//fix the hue wraparound problem
+
+		double biggest  = MAX( MAX(r1.x, r2.x), MAX(r3.x, r4.x) );
+
+		double smallest = MIN( MIN(r1.x, r2.x), MIN(r3.x, r4.x) );
+
+
+		if ((biggest >= 0.75) && (smallest < 0.25) )  // points span the hue discontinuity line
+		{
+			if (r1.x < 0.25) {r1.x += 1.0;}
+			if (r2.x < 0.25) {r2.x += 1.0;}
+			if (r3.x < 0.25) {r3.x += 1.0;}
+			if (r4.x < 0.25) {r4.x += 1.0;}
+		}
+
+
+
+		/***************/
+
+
 	}
-	
-	
-	/***************/
-	 	
 
 	float  noox =  lerp(yfrac, lerp(xfrac, r1.x, r2.x  )  , lerp(xfrac, r3.x , r4.x  ) ) ;
 	float  nooy =  lerp(yfrac, lerp(xfrac, r1.y, r2.y  )  , lerp(xfrac, r3.y , r4.y  ) ) ;
 
 	noox -= floor(noox);  //undo discontinuity offset
-	
+
+
 	return CGPointMake(noox, nooy);
-	
+
 }
- 
+
 
 /********************************************************/
- 
+
 @end
